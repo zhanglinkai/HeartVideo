@@ -1,39 +1,55 @@
-# newvideo
+# HeartVideo
 
-#### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+***
 
-#### 软件架构
-软件架构说明
+### HeartVideo是通过封装Mediaplayer+TextureView的视频播放器，封装此库的初衷是因为开发过程中简单的应用却要加载第三方过大的库增加了包的体积，同时在使用的过程中有一些功能的实现由局限性，故此封装此播放器，旨在用最简单的方法实现，后续会有更多的优化！
 
+> 查看功能是否是你想要的播放器
 
-#### 安装教程
+  >> 1.横竖屏随心所欲切换
+  
+  >> 2.支持单视频源，支持多视频源（高清-超清-标清）
+  
+  >> 3.支持占位图
+  
+  >> 4.支持单视频播放
+  
+  >> 5，支持视频列表播放
+  
+  >> 6.支持自定义控制界面
+  
+  >> 7.功能不一一列举，满足普通应用的视频功能
+  
+# 使用
 
-1. xxxx
-2. xxxx
-3. xxxx
+    allprojects {
+        repositories {
+          ...
+          maven { url 'https://www.jitpack.io' }
+        }
+    }
+    
+    dependencies {
+	        implementation 'com.github.zhanglinkai:HeartVideo:v1.0.0'
+	  }
+    
+# 说明
 
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [http://git.mydoc.io/](http://git.mydoc.io/)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+   ## 权限
+      
+          <uses-permission android:name="android.permission.INTERNET" />
+          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+          <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+          
+          
+   ## activity属性
+     
+     
+              android:configChanges="keyboardHidden|orientation|screenSize"
+              android:screenOrientation="portrait"
+              
+              
+   ## 其他
+      
+      
+         包中已加载recyclerview 和  Glide  主要作用于选择播放源的列表和占位图的加载，如果使用不必另行加载，如果不需要则修改包中的代码即可
