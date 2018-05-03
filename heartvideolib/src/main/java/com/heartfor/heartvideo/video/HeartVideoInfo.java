@@ -13,12 +13,14 @@ public class HeartVideoInfo {
     private String path;
     private LinkedHashMap<String,String> pathMap;
     private boolean isSaveProgress;
+    private String imagePath;
 
     public HeartVideoInfo(Builder builder){
         this.title=builder.title;
         this.path=builder.path;
         this.pathMap=builder.pathMap;
         this.isSaveProgress=builder.isSaveProgress;
+        this.imagePath=builder.imagePath;
         if (null!=pathMap){
             for (String key:pathMap.keySet()) {
                 setPath(pathMap.get(key));
@@ -50,6 +52,10 @@ public class HeartVideoInfo {
         return pathMap;
     }
 
+    public String getImagePath() {
+        return imagePath;
+    }
+
     public boolean isSaveProgress() {
         return isSaveProgress;
     }
@@ -63,6 +69,8 @@ public class HeartVideoInfo {
         private LinkedHashMap<String,String> pathMap;
         //是否保存进度，true--保存并从上次开始播放，false--从心开始播放
         private boolean isSaveProgress;
+        //占位图
+        private String imagePath;
 
         public Builder(){}
         public HeartVideoInfo builder(){
@@ -86,6 +94,11 @@ public class HeartVideoInfo {
 
         public Builder setSaveProgress(boolean saveProgress) {
             isSaveProgress = saveProgress;
+            return this;
+        }
+
+        public Builder setImagePath(String imagePath) {
+            this.imagePath = imagePath;
             return this;
         }
     }

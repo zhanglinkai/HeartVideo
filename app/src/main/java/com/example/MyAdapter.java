@@ -30,7 +30,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         String path="https://v4.438vip.com/20180311/3Q4fNFYh/index.m3u8";
-        HeartVideoInfo info=HeartVideoInfo.Builder().setTitle("xxxxx").setPath(path).setSaveProgress(true).builder();
+        String image="http://pic39.nipic.com/20140226/18071023_164300608000_2.jpg";
+        HeartVideoInfo info=HeartVideoInfo.Builder().setTitle("xxxxx").setPath(path).setImagePath(image).setSaveProgress(true).builder();
         VideoControl control=new VideoControl(context);
         control.setInfo(info);
         holder.myvideo.setHeartVideoContent(control);

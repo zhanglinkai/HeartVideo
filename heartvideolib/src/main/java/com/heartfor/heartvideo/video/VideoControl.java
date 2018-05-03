@@ -18,6 +18,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.heartfor.heartvideo.R;
 import com.heartfor.heartvideo.video.dialog.BrightnessDialog;
 import com.heartfor.heartvideo.video.dialog.LinePathDialog;
@@ -137,6 +138,7 @@ public class VideoControl extends HeartVideoParentControl implements View.OnClic
         this.info=info;
         linePathDialog = LinePathDialog.builder(getContext(), player, info);
         linePathDialog.setOnDismissListener(lineDialogDissClick);
+        Glide.with(context).load(info.getImagePath()).into(placeiv);
     }
 
     @Override
