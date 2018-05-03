@@ -1,39 +1,41 @@
-# newvideo
+# HeartVideo
 
-#### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+封装HeartVideo的初衷是简单应用开发用不到第三方过大的库，从而增加包的体积，同时在使用第三方的时候一些地方会有一定的局限性，所以封装此库，后续会慢慢优化，此库封装了Mediaplayer+TextureView，满足市场上大部分视频格式
 
-#### 软件架构
-软件架构说明
+#查看是否是你需要的功能：
 
+1.可单独播放视频
 
-#### 安装教程
+2.可列表播放视频
 
-1. xxxx
-2. xxxx
-3. xxxx
+3.可以保存播放进度
 
-#### 使用说明
+4.横竖屏随心所欲的切换
 
-1. xxxx
-2. xxxx
-3. xxxx
+5.支持单视频源，支持多视频源（标清-高清-超清）
 
-#### 参与贡献
+6.支持自定义控制界面
 
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+7.普通的视频应用肯定能满足，功能不一一列举了
 
 
-#### 码云特技
+#使用
 
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [http://git.mydoc.io/](http://git.mydoc.io/)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
+
+
+#说明
+
+1.权限
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    
+2.activity属性
+
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            
+            
+3.包中已经添加recycle人view，如果应用也使用可不必添加，只是使用，或者修改包体中的recycle人view，作用于选择播放源弹出界面
