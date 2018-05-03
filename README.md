@@ -30,7 +30,7 @@
     }
     
     dependencies {
-	        implementation 'com.github.zhanglinkai:HeartVideo:v1.0.0'
+	        implementation 'com.github.zhanglinkai:HeartVideo:v1.0.1'
 	  }
     
 # 说明
