@@ -20,6 +20,7 @@ public class HeartVideoInfo {
         this.path=builder.path;
         this.pathMap=builder.pathMap;
         this.isSaveProgress=builder.isSaveProgress;
+        this.imagePath=builder.imagePath;
         if (null!=pathMap){
             for (String key:pathMap.keySet()) {
                 setPath(pathMap.get(key));
